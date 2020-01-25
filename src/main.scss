@@ -1,9 +1,35 @@
-html{
-    background-color: gold;
+@import '../node_modules/reset-css/sass/reset';
+
+$pdf-width: 990px;
+$pdf-height: 1402px;
+
+@mixin pdf-page(){
+    width: $pdf-width;
+    height: $pdf-height;
+    overflow: auto;
 }
 
-body{
-    background-color: cyan;
-    border: 2px solid red;
-    height: 3000px;
+.first-page{
+    @include pdf-page();
+    // border: 1px solid red;
+    background-color: wheat;
+
+    // padding: 10px;
+}
+.second-page{
+    @include pdf-page();
+    background-color: blanchedalmond;
+    // padding: 10px;
+}
+
+.first-section{
+    margin: 30px;
+}
+
+.second-section{
+    margin: 30px;
+}
+
+h1{
+    font-size: 36px;
 }
