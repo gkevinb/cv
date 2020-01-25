@@ -1,0 +1,29 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "CV with Coding",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gulp browser-sync",
+    "export-pdf": "wkhtmltopdf http://localhost:3000/ example.pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkevinb/cv.git"
+  },
+  "author": "Gabor Kevin Barta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkevinb/cv/issues"
+  },
+  "homepage": "https://github.com/gkevinb/cv#readme",
+  "dependencies": {
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1"
+  }
+}
