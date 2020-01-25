@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "serve": "gulp browser-sync",
-    "export-pdf": "wkhtmltopdf http://localhost:3000/ example.pdf"
+    "pdf-margin": "wkhtmltopdf http://localhost:3000/ export/margin.pdf",
+    "pdf": "wkhtmltopdf -T 0 -B 0 -L 0 -R 0 http://localhost:3000/ export/example.pdf"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
-    "gulp-pug": "^4.0.1"
+    "gulp-clean-css": "^4.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2"
   }
 }

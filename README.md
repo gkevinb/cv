@@ -15,6 +15,8 @@ wkhtmltopdf https://gaborkevinbarta.com/blog gabor.pdf
 
 Note command can only be used on sites that are fully static, created using a static site generator. If there is anything dynaminc like `Vue.js` then the site won't be exported correctly.
 
+https://wkhtmltopdf.org/usage/wkhtmltopdf.txt
+
 ## Pug
 
 ```
