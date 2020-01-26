@@ -7,6 +7,7 @@ $pdf-height: 1402px;
     overflow: auto;
 }
 
+
 .first-page{
     @include pdf-page();
     background-color: burlywood;

@@ -1,2 +1,16 @@
 @import '../../../node_modules/reset-css/sass/reset';
-@import './cv'
+@import './cv';
+
+.header{
+    border: 3px solid brown;
+}
+
+.cv-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    div{
+        margin-bottom: 20px;
+    }
+}

@@ -2,6 +2,39 @@
 
 Creating my CV using HTML, CSS, and JS
 
+
+## Structure
+
+`src/pages` : Source code for presentable version to go on Github Pages
+
+`src/pdf` : Source code for pdf exportable version
+
+`assets/` : Source code for CV and other assets
+
+## Commands
+
+Deploy development server for presentable version
+```
+npm run serve-pages
+```
+Deploy development server for pdf exportable version
+```
+npm run serve-pdf
+```
+Build presentable version for Github Pages
+```
+npm run build
+```
+Export pdf (without margins)
+```
+npm run pdf
+```
+Export pdf (with margins, not used)
+```
+npm run pdf-margin
+```
+
+
 ## Converting to PDF
 
 Exporting my CV to a PDF using the following `wkhtmltopdf` command.
