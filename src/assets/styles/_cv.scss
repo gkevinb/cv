@@ -1,24 +1,31 @@
-$pdf-width: 990px;
-$pdf-height: 1402px;
+$pdf-width: 991px;
+$pdf-height: 1403px;
 
 @mixin pdf-page(){
     width: $pdf-width;
     height: $pdf-height;
-    overflow: auto;
+    overflow: auto; /* Collapsing Margins */
 }
-
 
 .first-page{
     @include pdf-page();
-    background-color: burlywood;
+    background-color: white;
 }
+
+.side-banner{
+    width: 330px;
+    height: $pdf-height;
+    background-color: cadetblue;
+    overflow: auto; /* Collapsing Margins */
+}
+
 .second-page{
     @include pdf-page();
     background-color: sandybrown;
 }
 
 .first-section{
-    margin: 30px;
+    margin: 20px;
 }
 
 .second-section{

@@ -28,7 +28,8 @@ gulp.task('show-args', async function() {
 gulp.task('pug-pages', function () {
     return gulp.src('src/pages/*.pug')
         .pipe(pug(pugPrettyOptions))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('pug-pages-build', function () {
@@ -40,7 +41,8 @@ gulp.task('pug-pages-build', function () {
 gulp.task('pug-pdf', function () {
     return gulp.src('src/pdf/*.pug')
         .pipe(pug(pugPrettyOptions))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('sass', function(){

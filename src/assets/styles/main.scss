@@ -1,6 +1,10 @@
 @import '../../../node_modules/reset-css/sass/reset';
 @import './cv';
 
+body{
+    background-color: beige;
+}
+
 .header{
     border: 3px solid brown;
 }
@@ -8,9 +12,9 @@
 .cv-container{
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 40px;
 
-    div{
-        margin-bottom: 20px;
+    div:nth-child(2){
+        margin-top: 40px;
     }
 }
