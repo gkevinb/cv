@@ -58,3 +58,7 @@ pug -w ./src -o ./dist -P
 -w : watch
 -o : output
 -P : pretty
+
+## Inject data into Pug using Gulp
+
+https://tusharghate.com/rendering-pug-templates-with-multiple-data-files
