@@ -34,6 +34,9 @@ Export pdf (with margins, not used)
 npm run pdf-margin
 ```
 
+## Instructions
+
+Run `npm run serve-pdf` command to start up localhost, then run `npm run pdf` to take snapshot of the localhost and convert it into a pdf file. The pdf file is called `example.pdf` and exported to the `export` directory.
 
 ## Converting to PDF
 

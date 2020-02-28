@@ -22,7 +22,7 @@ const paths = {
         main: 'src/assets/styles/main.scss',
         all: 'src/assets/styles/*.scss'
     },
-    data: 'src/assets/data.json'
+    data: 'src/assets/data/data.json'
 }
 
 const pugPrettyOptions = {
@@ -46,12 +46,6 @@ function injectJson() {
 }
 
 var pugSource = (argv.pug == undefined) ? null : argv.pug;
-
-// Example for old args, use yargs now
-gulp.task('show-args', async function () {
-    console.log(process.argv);
-    console.log(process.argv[3]);
-});
 
 gulp.task('pages-build', function () {
     return gulp.src(paths.pug.pages)
@@ -85,8 +79,8 @@ gulp.task('sass-build', function () {
 gulp.task('browser-sync', function () {
     browserSync.init(browserSyncOptions);
     gulp.watch(paths.scss.all, gulp.series('sass'));
-    gulp.watch(paths.data, gulp.series(pugSource));
-    gulp.watch(paths.pug.all, gulp.series(pugSource));
+    gulp.watch(paths.data, gulp.series('pug'));
+    gulp.watch(paths.pug.all, gulp.series('pug'));
     gulp.watch(paths.dist.html).on('change', browserSync.reload);
 });
 
