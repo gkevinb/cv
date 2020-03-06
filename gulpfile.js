@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const imagemin = require('gulp-imagemin');
 const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const data = require('gulp-data');
@@ -22,7 +23,8 @@ const paths = {
         main: 'src/assets/styles/main.scss',
         all: 'src/assets/styles/*.scss'
     },
-    data: 'src/assets/data/data.json'
+    data: 'src/assets/data/data.json',
+    img: 'src/assets/img/*'
 }
 
 const pugPrettyOptions = {
@@ -69,6 +71,13 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 });
 
+gulp.task('image-min', () =>
+    gulp.src(paths.img)
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.dist.all))
+        .pipe(browserSync.stream())
+);
+
 gulp.task('sass-build', function () {
     return gulp.src(paths.scss.main)
         .pipe(sass())
@@ -85,4 +94,4 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('build', gulp.series('pages-build', 'sass-build'));
-gulp.task('serve', gulp.series('pug', 'sass', 'browser-sync'));
+gulp.task('serve', gulp.series('pug', 'sass', 'image-min', 'browser-sync'));

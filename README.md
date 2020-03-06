@@ -9,7 +9,7 @@ Creating my CV using HTML, CSS, and JS
 
 `src/pdf` : Source code for pdf exportable version
 
-`assets/` : Source code for CV and other assets
+`assets` : Source code for CV and other assets
 
 ## Commands
 
