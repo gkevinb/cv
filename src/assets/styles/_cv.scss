@@ -1,37 +1,85 @@
 $pdf-width: 991px;
 $pdf-height: 1403px;
 
+$dark-blue: rgb(48, 68, 107);
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 @mixin pdf-page(){
     width: $pdf-width;
     height: $pdf-height;
     overflow: auto; /* Collapsing Margins */
 }
 
-.first-page{
+#first-page{
     @include pdf-page();
     background-color: white;
+
+    font-family: 'Montserrat', sans-serif;
 }
 
-.side-banner{
-    width: 330px;
-    height: $pdf-height;
-    background-color: cadetblue;
+.top-banner{
+    color: $dark-blue;
+    margin: 40px;
+    padding-bottom: 20px;
+    border-bottom: 5px solid $dark-blue;
+
+    h1{
+        font-size: 56px;
+    }
+    h2{
+        font-size: 28px;
+    }
+}
+
+.photo{
+    margin-left: 40px;
+
+    img {
+        width: 240px;
+        border-radius: 50%;
+    }
+    float: left;
+}
+
+.intro{
+    margin: 30px 36px;
+    line-height: 1.6;
+    width: 620px;
     overflow: auto; /* Collapsing Margins */
+    float: left;
+    text-align: justify;
 }
 
-.second-page{
+.side{
+    margin: 40px;
+    float: left;
+    clear: both;
+
+    h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+.experience{
+    margin-left: 40px;
+    float: left;
+    clear: both;
+
+    h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+#second-page{
     @include pdf-page();
     background-color: sandybrown;
 }
 
-.first-section{
-    margin: 20px;
-}
-
-.second-section{
-    margin: 30px;
-}
-
-h1{
-    font-size: 36px;
-}
+// .side-banner{
+//     width: 330px;
+//     height: $pdf-height;
+//     // background-color: cadetblue;
+//     overflow: auto; /* Collapsing Margins */
+// }

@@ -8,7 +8,8 @@
     "serve-pdf": "gulp serve --pug pdf",
     "build": "gulp build",
     "pdf-margin": "wkhtmltopdf http://localhost:3000/ export/margin.pdf",
-    "pdf": "wkhtmltopdf -T 0 -B 0 -L 0 -R 0 http://localhost:3000/ export/example.pdf && open export/example.pdf"
+    "pdf": "wkhtmltopdf -T 0 -B 0 -L 0 -R 0 --javascript-delay 1000 http://localhost:3000/ export/example.pdf && open export/example.pdf",
+    "pdf-gabor": "wkhtmltopdf -T 0 -B 0 -L 0 -R 0 --javascript-delay 1000 http://localhost:3000/ export/GaborKevinBartaCV.pdf && open export/GaborKevinBartaCV.pdf"
   },
   "repository": {
     "type": "git",

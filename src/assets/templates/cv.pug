@@ -1,16 +1,27 @@
 .cv
-    .first-page
-        .side-banner
-            .first-section
-                img(src="profile.png", alt="Profile Picture", width="280px")
-                h1=name
-                h2=title
-                p=email
-                br
-                a(href=website.link)=website.title
-                br
-                br
-                a(href=github.link)=github.title
-                br
-                br
-                a(href=linkedin.link)=linkedin.title
+    #first-page.page
+        .top-banner
+            h1=name
+            h2=title
+        .photo
+            img(src="profile-square.png" alt="Profile Picture")
+        .intro
+            p=intro
+        .side
+            h3 Contact
+            p=email
+            br
+            a(href=website.link)=website.title
+            br
+            br
+            a(href=github.link)=github.title
+            br
+            br
+            a(href=linkedin.link)=linkedin.title
+        .experience
+            h3 Education
+            each edu in education
+                p=edu.degree
+                a(href=edu.school.link)=edu.school.name
+    #second-page.page
+        h3 Page 2 Example

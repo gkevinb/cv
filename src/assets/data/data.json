@@ -1,10 +1,12 @@
 {
-    "name": "Gabor Kevin Barta",
+    "name": "Gábor Kevin Barta",
     "title": "Software Developer",
     "email": "gkevinba@gmail.com",
     "skype": "gkbarta",
-    "phone": "(+36) 20 437 3094",
+    "phone": "+36 20 437 3094",
     "birthday": "22 February 1994",
+    "city": "Budapest",
+    "country": "HU",
     "nationality": ["Hungarian", "American"],
     "website": {
         "title": "gaborkevinbarta.com",
@@ -17,5 +19,120 @@
     "linkedin": {
         "title": "in/gabor-kevin-barta",
         "link": "https://www.linkedin.com/in/gabor-kevin-barta/"
-    }
+    },
+    "intro": "I am a hard-working and dedicated software engineer eager to put my knowledge and skills to use at a company which challenges me and gives me an opportunity to grow even further. I am ambitious, and I stay focused on the task at hand. I am passionate about fullstack development. I am most proficient in back-end development and I also have knowledge of front-end languages. I am looking for a workplace where I can thrive on challenges and deepen my knowledge of software engineering.",
+    "education": [{
+            "degree": "MSc in Software Engineering",
+            "level": "Master",
+            "school": {
+                "name": "University of Southern Denmark Odense",
+                "link": "https://www.sdu.dk/en/"
+            },
+            "city": "Odense",
+            "country": "DK",
+            "timePeriod": "Sep 2016 - Jun 2018",
+            "details": "As a software engineer, I have gained knowledge on developing intelligent solutions on numerous platforms.",
+            "thesis": {
+                "title": "Data-based Generation of Reliability Models",
+                "details": "Developing an automated method of extracting a fault tree representation of a system from time series data."
+            }
+        },
+        {
+            "degree": "BSc in Electrical Engineering",
+            "level": "Bachelor",
+            "school": {
+                "name": "Budapest University of Technology and Economics",
+                "link": "http://www.bme.hu/"
+            },
+            "city": "Budapest",
+            "country": "HU",
+            "timePeriod": "Sep 2012 - Jun 2016",
+            "specialization": "Embedded and Control Systems",
+            "details": "As an electrical engineer specializing in embedded systems, I have gained experience in developing software on embedded devices and control systems.",
+            "thesis": {
+                "title": "Testing of AUTOSAR I-PDU Multiplexer",
+                "details": "Unit testing of a basic software module called I-PDU Multiplexer in the AUTOSAR, a standardized automotive software architecture, at ThyssenKrupp Presta Hungary."
+            }
+        }
+    ],
+    "partTimeJobs": [{
+            "title": "Software engineering intern",
+            "company": {
+                "name": "Buildcode IVS",
+                "link": "https://buildcode.dk/"
+            },
+            "city": "Odense",
+            "country": "DK",
+            "timePeriod": "Sep 2017 - Jun 2018",
+            "details": "Internship at a company in the construction industry. Developing automation and visualization tools."
+        },
+        {
+            "title": "University instructor",
+            "company": {
+                "name": "University of Southern Denmark Odense",
+                "link": "https://www.sdu.dk/en/"
+            },
+            "city": "Odense",
+            "country": "DK",
+            "timePeriod": "Sep 2017 - Jun 2018",
+            "details": "Instructed lab exercises in Modeling and Simulation, Statistics, and Artifical Intelligence."
+        },
+        {
+            "title": "Software developer",
+            "company": {
+                "name": "Demola Budapest",
+                "link": "https://www.demola.net/"
+            },
+            "city": "Budapest",
+            "country": "HU",
+            "timePeriod": "Mar 2016 - Jun 2016",
+            "details": "Developed an Arduino prototype device for a Siemens initiated project through the Demola organization."
+        },
+        {
+            "title": "Software developer intern",
+            "company": {
+                "name": "ThyssenKrupp Presta Hungary",
+                "link": "https://www.thyssenkrupp.hu/en/"
+            },
+            "city": "Budapest",
+            "country": "HU",
+            "timePeriod": "Jul 2015 - Dec 2015",
+            "details": "Internship at an automotive industry company. Unit testing an AUTOSAR software module."
+        }
+    ],
+    "fullTimeJobs": [
+        {
+            "title": "Python developer",
+            "company": {
+                "name": "Morgan Stanley",
+                "link": "https://www.morganstanley.com/"
+            },
+            "city": "Budapest",
+            "country": "HU",
+            "timePeriod": "Oct 2019 - Current",
+            "details": "Development of internal infrastructure systems at a global financial services firm."
+        },
+        {
+            "title": "IT consultant",
+            "company": {
+                "name": "Netcompany A/S",
+                "link": "https://www.netcompany.com/en-GB/"
+            },
+            "city": "Copenhagen",
+            "country": "DK",
+            "timePeriod": "Mar 2019 - May 2019",
+            "details": "Development of internal social media website to sign-up for company-wide events and software component analysis at CPH Airport"
+        },
+        {
+            "title": "Junior backend developer",
+            "company": {
+                "name": "Codeum A/S",
+                "link": "http://www.codeum.com/"
+            },
+            "city": "Copenhagen",
+            "country": "DK",
+            "timePeriod": "Nov 2018 - Jan 2019",
+            "details": "Developing online gaming platform in .NET Core at at company with a background in the global gaming industry,"
+        }
+    ]
 }
