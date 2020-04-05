@@ -78,6 +78,12 @@ gulp.task('image-min', () =>
         .pipe(browserSync.stream())
 );
 
+gulp.task('image-min-build', () =>
+    gulp.src(paths.img)
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.docs))
+);
+
 gulp.task('sass-build', function () {
     return gulp.src(paths.scss.main)
         .pipe(sass())
@@ -93,5 +99,5 @@ gulp.task('browser-sync', function () {
     gulp.watch(paths.dist.html).on('change', browserSync.reload);
 });
 
-gulp.task('build', gulp.series('pages-build', 'sass-build'));
+gulp.task('build', gulp.series('pages-build', 'sass-build', 'image-min-build'));
 gulp.task('serve', gulp.series('pug', 'sass', 'image-min', 'browser-sync'));
