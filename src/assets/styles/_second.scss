@@ -1,0 +1,11 @@
+#second-page{
+    @include pdf-page();
+    background-color: sandybrown;
+}
+
+.side-banner{
+    width: 330px;
+    height: $pdf-height;
+    // background-color: cadetblue;
+    overflow: auto; /* Collapsing Margins */
+}

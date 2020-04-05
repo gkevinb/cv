@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+$pdf-width: 991px;
+$pdf-height: 1403px;
+
+@mixin pdf-page(){
+    width: $pdf-width;
+    height: $pdf-height;
+    overflow: auto; /* Collapsing Margins */
+}

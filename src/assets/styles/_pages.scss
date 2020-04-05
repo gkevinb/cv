@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(236, 206, 170);
+}
+
+.header{
+    border: 3px solid brown;
+}
+
+.cv-container{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    overflow: auto; /* Collapsing Margins */
+
+    .page:nth-child(2){
+        margin-top: 40px;
+    }
+}

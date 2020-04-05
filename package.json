@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/gkevinb/cv#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
     "reset-css": "^5.0.1"

@@ -1,14 +1,4 @@
-$pdf-width: 991px;
-$pdf-height: 1403px;
-
 $dark-blue: rgb(48, 68, 107);
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-@mixin pdf-page(){
-    width: $pdf-width;
-    height: $pdf-height;
-    overflow: auto; /* Collapsing Margins */
-}
 
 #first-page{
     @include pdf-page();
@@ -72,14 +62,6 @@ $dark-blue: rgb(48, 68, 107);
     }
 }
 
-#second-page{
-    @include pdf-page();
-    background-color: sandybrown;
+i{
+    font-size: 20px;
 }
-
-// .side-banner{
-//     width: 330px;
-//     height: $pdf-height;
-//     // background-color: cadetblue;
-//     overflow: auto; /* Collapsing Margins */
-// }
