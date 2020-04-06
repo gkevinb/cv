@@ -56,7 +56,7 @@
         }
     ],
     "partTimeJobs": [{
-            "title": "Software engineering intern",
+            "title": "Software Engineering Intern",
             "company": {
                 "name": "Buildcode IVS",
                 "link": "https://buildcode.dk/"
@@ -67,7 +67,7 @@
             "details": "Internship at a company in the construction industry. Developing automation and visualization tools."
         },
         {
-            "title": "University instructor",
+            "title": "University Instructor",
             "company": {
                 "name": "University of Southern Denmark Odense",
                 "link": "https://www.sdu.dk/en/"
@@ -78,7 +78,7 @@
             "details": "Instructed lab exercises in Modeling and Simulation, Statistics, and Artifical Intelligence."
         },
         {
-            "title": "Software developer",
+            "title": "Software Developer",
             "company": {
                 "name": "Demola Budapest",
                 "link": "https://www.demola.net/"
@@ -89,7 +89,7 @@
             "details": "Developed an Arduino prototype device for a Siemens initiated project through the Demola organization."
         },
         {
-            "title": "Software developer intern",
+            "title": "Software Developer Intern",
             "company": {
                 "name": "ThyssenKrupp Presta Hungary",
                 "link": "https://www.thyssenkrupp.hu/en/"
@@ -102,7 +102,7 @@
     ],
     "fullTimeJobs": [
         {
-            "title": "Python developer",
+            "title": "Python Fullstack Developer",
             "company": {
                 "name": "Morgan Stanley",
                 "link": "https://www.morganstanley.com/"
@@ -113,7 +113,7 @@
             "details": "Development of internal infrastructure systems at a global financial services firm."
         },
         {
-            "title": "IT consultant",
+            "title": "IT Consultant",
             "company": {
                 "name": "Netcompany A/S",
                 "link": "https://www.netcompany.com/en-GB/"
@@ -124,7 +124,7 @@
             "details": "Development of internal social media website to sign-up for company-wide events and software component analysis at CPH Airport"
         },
         {
-            "title": "Junior backend developer",
+            "title": "Junior Backend Developer",
             "company": {
                 "name": "Codeum A/S",
                 "link": "http://www.codeum.com/"

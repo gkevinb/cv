@@ -9,19 +9,58 @@
             p=intro
         .side
             h3 Contact
-            p=email
-            br
-            a(href=website.link)=website.title
-            br
-            br
-            i(class="fab fa-github")
-            a(href=github.link)=github.title
-            br
-            br
-            i(class="fab fa-linkedin")
-            a(href=linkedin.link)=linkedin.title
+            .icon-text
+                i(class="icon fas fa-envelope")
+                span(class="text")=email
+            .icon-text
+                i(class="icon fas fa-phone-alt")
+                span(class="text")=phone
+            .icon-text
+                i(class="icon fab fa-skype")
+                span(class="text")=skype
+            .icon-text
+                i(class="icon fas fa-calendar-alt")
+                span(class="text")=birthday
+            .icon-text
+                i(class="icon fas fa-home")
+                span(class="text")=city
+                span(id="comma" class="text") ,
+                span(class="text")=country
+            .icon-text
+                i(class="icon fas fa-flag")
+                span(class="text")=nationality[0]
+                span(id="comma" class="text") ,
+                span(class="text")=nationality[1]
+            .icon-text
+                i(class="icon fas fa-globe")
+                a(class="text" href=website.link)=website.title
+            .icon-text
+                i(class="icon fab fa-github")
+                a(class="text" href=github.link)=github.title
+            .icon-text
+                i(class="icon fab fa-linkedin")
+                a(class="text" href=linkedin.link)=linkedin.title
         .experience
             h3 Education
             each edu in education
                 p=edu.degree
                 a(href=edu.school.link)=edu.school.name
+                p=edu.timePeriod
+                span=edu.city
+                span=edu.country
+                p=edu.details
+            h3 Experience
+            each job in fullTimeJobs
+                p=job.title
+                a(href=job.company.link)=job.company.name
+                p=job.timePeriod
+                span=job.city
+                span=job.country
+                p=job.details
+            each job in partTimeJobs
+                p=job.title
+                a(href=job.company.link)=job.company.name
+                p=job.timePeriod
+                span=job.city
+                span=job.country
+                p=job.details

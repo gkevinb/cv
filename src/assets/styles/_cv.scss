@@ -62,6 +62,20 @@ $dark-blue: rgb(48, 68, 107);
     }
 }
 
-i{
-    font-size: 20px;
+.icon-text{
+    $icon-text-size: 32px;
+    padding: 5px;
+
+    .icon{
+        font-size: $icon-text-size;
+    }
+    .text{
+        margin-left: 10px;
+        vertical-align: top;
+        line-height: $icon-text-size;
+    }
+}
+
+#comma{
+    margin-left: 0;
 }
