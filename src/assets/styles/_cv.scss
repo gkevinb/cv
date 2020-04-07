@@ -53,12 +53,23 @@ $dark-blue: rgb(48, 68, 107);
 
 .experience{
     margin-left: 40px;
+    width: 590px;
     float: left;
-    clear: both;
 
     h3{
         font-size: 24px;
         margin-bottom: 10px;
+    }
+    .title{
+        font-weight: bold;
+        width: 400px;
+        float: left;
+    }
+    .time-period{
+        width: 190px;
+        float: right;
+        color: grey;
+        text-align: right;
     }
 }
 
@@ -78,4 +89,46 @@ $dark-blue: rgb(48, 68, 107);
 
 #comma{
     margin-left: 0;
+    margin-right: -4px;
+}
+
+#email-icon{
+    font-size: 30px;
+}
+
+#phone-icon{
+    font-size: 28px;
+    margin-left: 1px;
+    margin-left: 2px;
+}
+
+#phone-number{
+    letter-spacing: 1px;
+}
+
+#skype-icon{
+    margin-left: 1px;
+}
+
+#home-icon{
+    font-size: 30px;
+    margin-left: -1px;
+    margin-right: -2px;
+}
+
+#calendar-icon{
+    font-size: 30px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#flag-icon{
+    font-size: 28px;
+    margin-left: 2px;
+    margin-right: 1px;
+}
+
+#linkedin-icon{
+    margin-left: 1px;
+    margin-right: 3px;
 }

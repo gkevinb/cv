@@ -10,57 +10,67 @@
         .side
             h3 Contact
             .icon-text
-                i(class="icon fas fa-envelope")
-                span(class="text")=email
+                i(id="email-icon" class="icon fas fa-envelope")
+                a(class="text" href="mailto:" + email)=email
             .icon-text
-                i(class="icon fas fa-phone-alt")
-                span(class="text")=phone
+                i(id="phone-icon" class="icon fas fa-phone-alt")
+                a(class="text" href="tel:" + phone)=phone
             .icon-text
-                i(class="icon fab fa-skype")
+                i(id="skype-icon" class="icon fab fa-skype")
                 span(class="text")=skype
             .icon-text
-                i(class="icon fas fa-calendar-alt")
+                i(id="calendar-icon" class="icon fas fa-calendar-alt")
                 span(class="text")=birthday
             .icon-text
-                i(class="icon fas fa-home")
+                i(id="home-icon" class="icon fas fa-home")
                 span(class="text")=city
                 span(id="comma" class="text") ,
                 span(class="text")=country
             .icon-text
-                i(class="icon fas fa-flag")
+                i(id="flag-icon" class="icon fas fa-flag")
                 span(class="text")=nationality[0]
                 span(id="comma" class="text") ,
                 span(class="text")=nationality[1]
             .icon-text
-                i(class="icon fas fa-globe")
+                i(id="website-icon" class="icon fas fa-globe")
                 a(class="text" href=website.link)=website.title
             .icon-text
-                i(class="icon fab fa-github")
+                i(id="github-icon" class="icon fab fa-github")
                 a(class="text" href=github.link)=github.title
             .icon-text
-                i(class="icon fab fa-linkedin")
+                i(id="linkedin-icon" class="icon fab fa-linkedin")
                 a(class="text" href=linkedin.link)=linkedin.title
         .experience
-            h3 Education
-            each edu in education
-                p=edu.degree
-                a(href=edu.school.link)=edu.school.name
-                p=edu.timePeriod
-                span=edu.city
-                span=edu.country
-                p=edu.details
             h3 Experience
             each job in fullTimeJobs
-                p=job.title
+                p(class="title")=job.title
+                p(class="time-period")=job.timePeriod
                 a(href=job.company.link)=job.company.name
-                p=job.timePeriod
+                br
                 span=job.city
+                span , 
                 span=job.country
                 p=job.details
+                br
             each job in partTimeJobs
-                p=job.title
+                p(class="title")=job.title
+                p(class="time-period")=job.timePeriod
                 a(href=job.company.link)=job.company.name
-                p=job.timePeriod
+                br
                 span=job.city
+                span , 
                 span=job.country
                 p=job.details
+                br
+            
+            h3 Education
+            each edu in education
+                p(class="title")=edu.degree
+                p(class="time-period")=edu.timePeriod
+                a(href=edu.school.link)=edu.school.name
+                br
+                span=edu.city
+                span , 
+                span=edu.country
+                p=edu.details
+                br
