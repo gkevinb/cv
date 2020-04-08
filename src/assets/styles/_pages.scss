@@ -3,7 +3,24 @@ body{
 }
 
 .header{
-    border: 3px solid brown;
+    width: $pdf-width;
+    margin: 20px auto 80px auto;
+
+    #title{
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    #website-link{
+        width: 300px;
+        float: left;
+        margin: 0;
+    }
+    #download-link{
+        width: 300px;
+        float: right;
+        text-align: right;
+    }
 }
 
 .cv-container{
