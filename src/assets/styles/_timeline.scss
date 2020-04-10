@@ -1,0 +1,152 @@
+#timeline-large{
+    width: 900px;
+    height: 840px;
+    margin-left: 40px;
+    margin-top: 200px;
+    clear: both;
+
+    line-height: 1.1;
+}
+
+#timeline-container{
+    width: 100px;
+    float: left;
+}
+
+#timeline{
+    width: 3px;
+    height: 860px;
+    background-color: rgb(124, 124, 124);
+    margin-left: 20px;
+
+    #bubble-current{
+        margin-top: 0;
+    }
+    #bubble-2020{
+        margin-top: 30px;
+    }
+    #bubble-2019{
+        margin-top: 200px;
+    }
+    #bubble-2018{
+        margin-top: 220px;
+    }
+    #bubble-2017{
+        margin-top: 70px;
+    }
+    #bubble-2016{
+        margin-top: 130px;
+    }
+    #bubble-2015{
+        margin-top: 50px;
+    }
+    #bubble-2014{
+        margin-top: 15px;
+    }
+    #bubble-2013{
+        margin-top: 15px;
+    }
+    #bubble-2012{
+        margin-top: 15px;
+    }
+}
+
+.bubble-container{
+    width: 60px;
+    float: left;
+    margin-left: -3px;
+
+    .bubble{
+        // margin-left: -3px;
+        height: 9px;
+        width: 9px;
+        background-color: black;
+        border-radius: 50%;
+        float: left;
+    }
+    .year{
+        float: left;
+        margin-left: 5px;
+        margin-top: -3px;
+    }
+
+}
+
+.side-contact{
+    float: left;
+    width: 400px;
+    h3{
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+#education-container{
+    float: left;
+    margin-top: 40px;
+    clear: both;
+}
+
+#experience-container{
+    float: right;
+}
+
+.eduexp-container{
+    width: 400px;
+    overflow: auto; /* Collapsing Margins */
+    p{
+        width: 400px;
+        float: left;
+    }
+    .title{
+        font-weight: bold;
+        width: 240px;
+        float: left;
+        font-size: 16px;
+    }
+    .time-period{
+        width: 160px;
+        float: right;
+        color: grey;
+        text-align: right;
+    }
+    .company{
+        float: left;
+        margin-top: 5px;
+        clear: both;
+    }
+    .location{
+        float: left;
+        color: grey;
+        margin-top: 5px;
+    }
+    .details{
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    .thesis-title{
+        float: left;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 800;
+    }
+    .thesis-details{
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+
+.category{
+    // float: left;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    clear: both;
+}

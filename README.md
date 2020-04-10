@@ -70,3 +70,5 @@ https://tusharghate.com/rendering-pug-templates-with-multiple-data-files
 
 - CSS Grid and Flex does not work when exporting to PDF, seems like only classic CSS methods of positioning work
 - Careful using `overflow: auto; /* Collapsing Margins */` might render 'ghosting' margin
+
+https://stackoverflow.com/questions/42770774/wkhtmltopdf-same-configuration-different-output

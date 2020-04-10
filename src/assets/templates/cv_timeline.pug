@@ -1,0 +1,106 @@
+.cv
+    #first-page.page
+        .top-banner
+            h1=name
+            h2=title
+        .photo
+            img(src="profile-square.png" alt="Profile Picture")
+        .intro
+            p=intro
+        
+        #timeline-large
+            .side-contact
+                h3 Contact
+                .icon-text
+                    i(id="email-icon" class="icon fas fa-envelope")
+                    a(class="text" href="mailto:" + email)=email
+                .icon-text
+                    i(id="phone-icon" class="icon fas fa-phone-alt")
+                    a(class="text" href="tel:" + phone)=phone
+                .icon-text
+                    i(id="skype-icon" class="icon fab fa-skype")
+                    span(class="text")=skype
+                .icon-text
+                    i(id="calendar-icon" class="icon fas fa-calendar-alt")
+                    span(class="text")=birthday
+                .icon-text
+                    i(id="home-icon" class="icon fas fa-home")
+                    span(class="text")=city
+                    span(id="comma" class="text") ,
+                    span(class="text")=country
+                .icon-text
+                    i(id="flag-icon" class="icon fas fa-flag")
+                    span(class="text")=nationality[0]
+                    span(id="comma" class="text") ,
+                    span(class="text")=nationality[1]
+                .icon-text
+                    i(id="website-icon" class="icon fas fa-globe")
+                    a(class="text" href=website.link)=website.title
+                .icon-text
+                    i(id="github-icon" class="icon fab fa-github")
+                    a(class="text" href=github.link)=github.title
+                .icon-text
+                    i(id="linkedin-icon" class="icon fab fa-linkedin")
+                    a(class="text" href=linkedin.link)=linkedin.title
+            
+                #education-container.eduexp-container
+                    h1.category Education
+                    each edu in education
+                        p(class="title")=edu.degree
+                        p(class="time-period")=edu.timePeriod
+                        a(class="company" href=edu.school.link)=edu.school.name
+                        p(class="location") #{edu.city}, #{edu.country}
+                        p(class="details")=edu.details
+                        p(class="thesis-title")=edu.thesis.title
+                        p(class="thesis-details")=edu.thesis.details
+
+            #timeline-container
+                br 
+                #timeline
+                    #bubble-current.bubble-container
+                        .bubble
+                        .year Now
+                    #bubble-2020.bubble-container
+                        .bubble
+                        .year 2020
+                    #bubble-2019.bubble-container
+                        .bubble
+                        .year 2019
+                    #bubble-2018.bubble-container
+                        .bubble
+                        .year 2018
+                    #bubble-2017.bubble-container
+                        .bubble
+                        .year 2017
+                    #bubble-2016.bubble-container
+                        .bubble
+                        .year 2016
+                    #bubble-2015.bubble-container
+                        .bubble
+                        .year 2015
+                    #bubble-2014.bubble-container
+                        .bubble
+                        .year 2014
+                    #bubble-2013.bubble-container
+                        .bubble
+                        .year 2013
+                    #bubble-2012.bubble-container
+                        .bubble
+                        .year 2012
+                    
+            #experience-container.eduexp-container
+                h1.category Experience
+                each job in fullTimeJobs
+                    p(class="title")=job.title
+                    p(class="time-period")=job.timePeriod
+                    a(class="company" href=job.company.link)=job.company.name
+                    p(class="location") #{job.city}, #{job.country}
+                    p(class="details")=job.details
+
+                h1.category Internships and Part-time
+                each job in partTimeJobs  
+                    p(class="title")=job.title
+                    p(class="time-period")=job.timePeriod
+                    a(class="company" href=job.company.link)=job.company.name
+                    p(class="location") #{job.city}, #{job.country}
+                    p(class="details")=job.details
