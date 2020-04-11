@@ -23,14 +23,10 @@
                 span(class="text")=birthday
             .icon-text
                 i(id="home-icon" class="icon fas fa-home")
-                span(class="text")=city
-                span(id="comma" class="text") ,
-                span(class="text")=country
+                span(class="text") #{city}, #{country}
             .icon-text
                 i(id="flag-icon" class="icon fas fa-flag")
-                span(class="text")=nationality[0]
-                span(id="comma" class="text") ,
-                span(class="text")=nationality[1]
+                span(class="text") #{nationality[0]}, #{nationality[1]}
             .icon-text
                 i(id="website-icon" class="icon fas fa-globe")
                 a(class="text" href=website.link)=website.title
@@ -50,10 +46,6 @@
             .icon-text
                 i(id="python-icon" class="icon fab fa-js-square")
             
-            //- span Custom-built using 
-            //- a#pug Pug
-            //- span  and 
-            //- a#css CSS
 
         .experience
             h3 Experience

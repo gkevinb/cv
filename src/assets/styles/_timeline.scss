@@ -1,10 +1,9 @@
 #timeline-large{
     width: 900px;
-    height: 840px;
+    height: 884px;
     margin-left: 40px;
-    margin-top: 200px;
+    margin-top: 310px;
     clear: both;
-
     line-height: 1.1;
 }
 
@@ -26,16 +25,16 @@
         margin-top: 30px;
     }
     #bubble-2019{
-        margin-top: 210px;
+        margin-top: 220px;
     }
     #bubble-2018{
-        margin-top: 210px;
+        margin-top: 220px;
     }
     #bubble-2017{
-        margin-top: 100px;
+        margin-top: 90px;
     }
     #bubble-2016{
-        margin-top: 100px;
+        margin-top: 90px;
     }
     #bubble-2015{
         margin-top: 50px;
@@ -55,11 +54,12 @@
     width: 60px;
     float: left;
     margin-left: -3px;
+    $bubble-size: 9px;
 
     .bubble{
         // margin-left: -3px;
-        height: 9px;
-        width: 9px;
+        height: $bubble-size;
+        width: $bubble-size;
         background-color: black;
         border-radius: 50%;
         float: left;
@@ -84,7 +84,7 @@
 
 #education-container{
     float: left;
-    margin-top: 40px;
+    margin-top: 20px;
     clear: both;
 }
 
@@ -116,6 +116,23 @@
         margin-top: 5px;
         clear: both;
     }
+    .school-icon{
+        margin-top: 5px;
+        margin-right: 5px;
+        float: left;
+        clear: both;
+    }
+    .school{
+        float: left;
+        margin-top: 5px;
+        // clear: both;
+    }
+    .marker-icon{
+        margin-top: 5px;
+        margin-right: 5px;
+        float: left;
+        clear: both;
+    }
     .location{
         float: left;
         color: grey;
@@ -137,10 +154,7 @@
         margin-top: 5px;
         margin-bottom: 20px;
     }
-    
 }
-
-
 
 .category{
     // float: left;
@@ -149,4 +163,9 @@
     font-weight: 800;
     margin-bottom: 10px;
     clear: both;
+}
+
+.footnote{
+    margin-top: 20px;
+    text-align: center;
 }

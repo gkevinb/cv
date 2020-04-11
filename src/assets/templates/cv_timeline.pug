@@ -25,14 +25,10 @@
                     span(class="text")=birthday
                 .icon-text
                     i(id="home-icon" class="icon fas fa-home")
-                    span(class="text")=city
-                    span(id="comma" class="text") ,
-                    span(class="text")=country
+                    span(class="text") #{city}, #{country}
                 .icon-text
                     i(id="flag-icon" class="icon fas fa-flag")
-                    span(class="text")=nationality[0]
-                    span(id="comma" class="text") ,
-                    span(class="text")=nationality[1]
+                    span(class="text") #{nationality[0]}, #{nationality[1]}
                 .icon-text
                     i(id="website-icon" class="icon fas fa-globe")
                     a(class="text" href=website.link)=website.title
@@ -48,7 +44,9 @@
                     each edu in education
                         p(class="title")=edu.degree
                         p(class="time-period")=edu.timePeriod
-                        a(class="company" href=edu.school.link)=edu.school.name
+                        //- i(class="school-icon fas fa-graduation-cap")
+                        a(class="school" href=edu.school.link)=edu.school.name
+                        //- i(class="marker-icon fas fa-map-marker-alt")
                         p(class="location") #{edu.city}, #{edu.country}
                         p(class="details")=edu.details
                         p(class="thesis-title")=edu.thesis.title
@@ -104,3 +102,9 @@
                     a(class="company" href=job.company.link)=job.company.name
                     p(class="location") #{job.city}, #{job.country}
                     p(class="details")=job.details
+
+        .footnote
+            span Custom-built using 
+            a#pug Pug
+            span  and 
+            a#css CSS
