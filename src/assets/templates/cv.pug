@@ -3,7 +3,7 @@
         .top-banner
             h1=name
             h2=title
-        .photo
+        .photo-img
             img(src="profile-square.png" alt="Profile Picture")
         .intro
             p=intro
@@ -17,7 +17,7 @@
                 a(class="text" href="tel:" + phone)=phone
             .icon-text
                 i(id="skype-icon" class="icon fab fa-skype")
-                span(class="text")=skype
+                a(class="text" href="skype:" + skype + "?userinfo")=skype
             .icon-text
                 i(id="calendar-icon" class="icon fas fa-calendar-alt")
                 span(class="text")=birthday
