@@ -42,7 +42,7 @@
         
         #timeline-large
             .side-content
-                h3#skills-header Skills
+                h3#skills-header.section-title Skills
                 .skills
                     .skill
                         .skill-name Python
@@ -69,7 +69,7 @@
                         .skill-bar
                             .lvl.lvl-5
 
-                h3 Languages
+                h3.section-title Languages
                 .languages
                     .grouping-languages
                         h4 Native
@@ -79,7 +79,7 @@
                         h4 Learning
                         p.language-list Chinese
 
-                h3 Hobbies
+                h3.section-title Hobbies
                 .hobbies
                     .hobby
                         i(id="snowboarding-icon" class="hobby-icon fas fa-snowboarding")
@@ -92,7 +92,7 @@
                         .hobby-text Reading
 
                 #education-container.eduexp-container
-                    h1.category Education
+                    h3.category.section-title Education
                     each edu in education
                         p(class="title")=edu.degree
                         p(class="time-period")=edu.timePeriod
@@ -105,7 +105,6 @@
                         p(class="thesis-details")=edu.thesis.details
 
             #timeline-container
-                br 
                 #timeline
                     #bubble-current.bubble-container
                         .bubble
@@ -139,7 +138,7 @@
                         .year 2012
                     
             #experience-container.eduexp-container
-                h1.category Experience
+                h3.category.section-title Experience
                 each job in fullTimeJobs
                     p(class="title")=job.title
                     p(class="time-period")=job.timePeriod
@@ -147,7 +146,7 @@
                     p(class="location") #{job.city}, #{job.country}
                     p(class="details")=job.details
 
-                h1.category Internships and Part-time
+                h3.category.section-title Internships and Part-time
                 each job in partTimeJobs  
                     p(class="title")=job.title
                     p(class="time-period")=job.timePeriod
@@ -157,6 +156,6 @@
 
         .footnote
             span Custom-built using 
-            a#pug Pug
+            a(id="pug" href="https://pugjs.org/") Pug
             span  and 
-            a#css CSS
+            a(id="sass" href="https://sass-lang.com/") SASS
