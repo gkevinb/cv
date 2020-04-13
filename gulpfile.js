@@ -39,8 +39,9 @@ const pugMinifiedOptions = {
 
 const browserSyncOptions = {
     server: {
-        baseDir: paths.dist.all
-    }
+        baseDir: paths.dist.all,
+    },
+    notify: false
 }
 
 function injectJson() {

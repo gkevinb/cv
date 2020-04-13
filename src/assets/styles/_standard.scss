@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 $pdf-width: 991px;
-$pdf-height: 1403px;
+$pdf-height: 1402px;
+// $pdf-height: 1403px; /* Old wkhtmltopdf generation */
 
 @mixin pdf-page(){
     width: $pdf-width;

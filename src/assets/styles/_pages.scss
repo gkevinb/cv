@@ -1,5 +1,7 @@
 body{
     background-color: rgb(236, 206, 170);
+    -webkit-print-color-adjust: exact;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust */
 }
 
 .header{
