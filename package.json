@@ -11,7 +11,7 @@
     "pdf": "wkhtmltopdf -T 0 -B 0 -L 0 -R 0 --javascript-delay 1000 http://localhost:3000/ export/example.pdf && open export/example.pdf",
     "pdf-gabor": "wkhtmltopdf -T 0 -B 0 -L 0 -R 0 --javascript-delay 1000 http://localhost:3000/ export/GaborKevinBartaCV.pdf && open export/GaborKevinBartaCV.pdf",
     "pdf-puppeteer": "node index.js"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gkevinb/cv.git"
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/gkevinb/cv#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "node-sass": "^4.14.1",
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
     "puppeteer": "^2.1.1",
