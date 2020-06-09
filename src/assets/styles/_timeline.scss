@@ -265,40 +265,10 @@ $dark-blue: rgb(48, 68, 107);
             // color: white;
         }
 
-        .lvl-10 {
-            width: $skill-bar-width;
-        }
-
-        .lvl-9 {
-            width: 9 * $skill-bar-increment;
-        }
-
-        .lvl-8 {
-            width: 8 * $skill-bar-increment;
-        }
-
-        .lvl-7 {
-            width: 7 * $skill-bar-increment;
-        }
-
-        .lvl-6 {
-            width: 6 * $skill-bar-increment;
-        }
-
-        .lvl-5 {
-            width: 5 * $skill-bar-increment;
-        }
-
-        .lvl-4 {
-            width: 4 * $skill-bar-increment;
-        }
-
-        .lvl-3 {
-            width: 3 * $skill-bar-increment;
-        }
-
-        .lvl-2 {
-            width: 2 * $skill-bar-increment;
+        @for $i from 2 through 10 {
+            .lvl-#{$i} {
+                width: $i * $skill-bar-increment;
+            }
         }
     }
 }
