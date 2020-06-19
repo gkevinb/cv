@@ -1,0 +1,50 @@
+.desk-top-background{
+    overflow: auto; /* Collapsing Margins */
+
+    $light-brown: rgba(194, 150, 84, 0.5);
+    $medium-brown: rgba(187, 136, 69, 0.5);
+    $dark-brown: rgba(177, 125, 42, 0.5);
+
+    $lines: rgba(167, 115, 67, 0.144);
+    $transparent: rgba(255, 255, 255, 0);
+
+    /* Creates array for random undertone values for wood */
+    $undertone: rgba(243,207,154,.3) 1%;
+    @for $i from 1 through 33 {
+        $undertone: $undertone, rgba(random(15) + 235, random(15) + 200, random(15) + 150, 0.4) $i * 3%,
+    }
+
+    /* Creates array for slight shading for horizontal lines in wood */
+    $line-shading: $lines 0%, 1%, $transparent random(3) + 1%;
+    @for $i from 1 through 19{
+        $line-shading: $line-shading, $lines $i * 5%, ($i * 5%) + 1, $transparent ($i * 5%) + 1 + random(3)
+    }
+
+    background-image:
+    /* Main horizontal lines that divide wood into darker and lighter patches */
+    repeating-linear-gradient(
+        $medium-brown 0px,
+        $dark-brown 20px,
+        $dark-brown 140px,
+        $medium-brown 160px,
+        $light-brown 180px,
+        $light-brown 300px,
+        $medium-brown 320px,
+    ),
+    /* Small lines to give presence of rings in wood */
+    repeating-linear-gradient(
+        $lines 0px, 1px,
+        $transparent random(10) + 20px,
+        $lines 30px
+    ),
+    /* Gives slight random coloring undertone for wood */
+    linear-gradient(
+        $undertone,
+        rgba(243,207,154,.3)  100%/* determines size */
+    ),
+    /* Gives slight shading to rings in wood */
+    linear-gradient(
+        $line-shading,
+        rgba(243,207,154,.1)  100%/* determines size */
+    );
+}
