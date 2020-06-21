@@ -6,22 +6,30 @@ body{
 
 .header{
     width: $pdf-width;
-    margin: 20px auto 80px auto;
+    margin: 30px auto 100px auto;
 
     #title{
         text-align: center;
         font-size: 36px;
         margin-bottom: 20px;
     }
+    .link-button{
+        font-family: 'Montserrat', sans-serif;
+        box-shadow: 0px 7px 35px -10px rgba(0,0,0,0.75);
+        text-decoration: none;
+        background-color: #4C7FBE;
+        color: white;
+        border-radius: 6px;
+        width: 150px;
+        text-align: center;
+        padding: 10px;
+    }
     #website-link{
-        width: 300px;
         float: left;
         margin: 0;
     }
     #download-link{
-        width: 300px;
         float: right;
-        text-align: right;
     }
 }
 
