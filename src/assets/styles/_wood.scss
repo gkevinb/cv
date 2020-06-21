@@ -1,5 +1,7 @@
 .desk-top-background{
+    background-color: rgb(236, 214, 187);
     overflow: auto; /* Collapsing Margins */
+    height: 100vh; /* 100% of the viewport height */
 
     $light-brown: rgba(194, 150, 84, 0.5);
     $medium-brown: rgba(187, 136, 69, 0.5);

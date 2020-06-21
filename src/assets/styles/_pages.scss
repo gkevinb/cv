@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(236, 214, 187);
+    background-color: #C89F68;
     -webkit-print-color-adjust: exact;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust */
 }
@@ -28,8 +28,9 @@ body{
 .cv-container{
     display: flex;
     justify-content: center;
-    margin: 60px 224px;
+    margin: 60px auto;
     overflow: auto; /* Collapsing Margins */
+    width: $pdf-width;
 
     box-shadow: -1px 12px 100px -24px rgba(0,0,0,0.75);
 
