@@ -1,6 +1,6 @@
 body{
     background-color: #C89F68;
-    -webkit-print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; /* Needed for proper color in PDF generation */
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust */
 }
 

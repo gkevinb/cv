@@ -89,7 +89,10 @@ gulp.task('image-min-build', () =>
 gulp.task('sass-build', function () {
     return gulp.src(paths.scss.main)
         .pipe(sass())
-        // .pipe(autoprefixer())
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 99 versions'],
+            cascade: false
+        }))
         .pipe(cleanCSS())
         .pipe(gulp.dest(paths.docs))
 });
