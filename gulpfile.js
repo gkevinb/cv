@@ -3,6 +3,7 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const data = require('gulp-data');
 const fs = require('fs');
@@ -88,6 +89,7 @@ gulp.task('image-min-build', () =>
 gulp.task('sass-build', function () {
     return gulp.src(paths.scss.main)
         .pipe(sass())
+        // .pipe(autoprefixer())
         .pipe(cleanCSS())
         .pipe(gulp.dest(paths.docs))
 });
