@@ -6,13 +6,10 @@ body{
 
 .header{
     width: $pdf-width;
-    margin: 30px auto 100px auto;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
 
-    #title{
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
     .link-button{
         font-family: 'Montserrat', sans-serif;
         box-shadow: 0px 7px 35px -10px rgba(0,0,0,0.75);
@@ -26,13 +23,6 @@ body{
         &:hover{
             background-color: #416796;
         }
-    }
-    #website-link{
-        float: left;
-        margin: 0;
-    }
-    #download-link{
-        float: right;
     }
 }
 
