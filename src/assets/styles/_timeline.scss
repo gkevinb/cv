@@ -1,57 +1,115 @@
 $dark-blue: rgb(48, 68, 107);
 
-#first-page{
-    @include pdf-page();
-    background-color: white;
 
+#first-page{
+    // @include pdf-page();
+    background-color: white;
+    width: 400px;
+    // height: 1400px;
+    overflow: auto; // Collapsing margins
     font-family: 'Montserrat', sans-serif;
     font-size: 14px; /* Renders similarly on PDF */
 }
 
-.top-section {
-    margin: 40px;
-    height: 220px;
-
-    .photo {
-        img {
-            width: 220px;
-            border-radius: 50%;
-        }
-        float: left;
+@media only screen and (min-width: 1000px) {
+    #first-page{
+        @include pdf-page();
     }
-
-    .headline {
-        margin-left: 30px;
-        float: left;
-        width: 650px;
-        color: $dark-blue;
-        border-bottom: 3px solid $dark-blue;
-
-        h1 {
-            font-size: 44px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-    }
-
-    .personal-info {
-        margin-top: 10px;
-        margin-left: 30px;
-        float: left;
-        width: 660px;
-        height: 140px;
-
-        .contact-group {
-            float: left;
-            margin: 7px;
-        }
-    }
-
 }
+
+@media only screen and (min-width: 1000px) {
+    .top-section {
+        margin: 40px;
+        height: 220px;
+    
+        .photo {
+            img {
+                width: 220px;
+                border-radius: 50%;
+            }
+            float: left;
+        }
+    
+        .headline {
+            margin-left: 30px;
+            float: left;
+            width: 650px;
+            color: $dark-blue;
+            border-bottom: 3px solid $dark-blue;
+    
+            h1 {
+                font-size: 44px;
+                margin-bottom: 10px;
+            }
+    
+            h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
+    
+        .personal-info {
+            margin-top: 10px;
+            margin-left: 30px;
+            float: left;
+            width: 660px;
+            height: 140px;
+    
+            .contact-group {
+                float: left;
+                margin: 7px;
+            }
+        }
+    
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .top-section{
+        // background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .photo {
+            #profile-image {
+                margin: 20px;
+                width: 280px;
+                border-radius: 50%;
+            }
+        }
+    
+        .headline {
+            text-align: center;
+            color: $dark-blue;
+            border-bottom: 3px solid $dark-blue;
+            h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+    
+            h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+    
+        }
+    
+        // .personal-info {
+        //     margin-top: 10px;
+        //     margin-left: 30px;
+        //     width: 260px;
+        //     height: 140px;
+    
+        //     .contact-group {
+        //         float: left;
+        //         margin: 7px;
+        //     }
+        // }
+    }
+  }
 
 .icon-text {
     $icon-text-size: 32px;
@@ -114,159 +172,233 @@ $dark-blue: rgb(48, 68, 107);
     }
 }
 
-.intro-section {
-    margin: 0 40px 40px 40px;
-    line-height: 1.6;
-    overflow: auto;
-    /* Collapsing Margins */
-    float: left;
-    text-align: justify;
-    font-size: 16px;
+@media only screen and (min-width: 1000px) {
+    .intro-section {
+        margin: 0 40px 40px 40px;
+        line-height: 1.6;
+        overflow: auto;
+        /* Collapsing Margins */
+        float: left;
+        text-align: justify;
+        font-size: 16px;
+    }
 }
 
+@media only screen and (max-width: 600px) {
+    .intro-section {
+        margin: 40px;
+        line-height: 1.6;
+        overflow: auto;
+        /* Collapsing Margins */
+        // float: left;
+        text-align: justify;
+        // font-size: 16px;
+    }
+}
 
 .section-title{
     text-align: center;
     font-size: 22px;
     font-weight: 800;
 }
-
-#timeline-large {
-    width: 900px;
-    height: 884px;
-    margin-left: 40px;
-    clear: both;
-    line-height: 1.1;
-}
-
-#timeline-container {
-    width: 100px;
-    float: left;
-    margin-top: 20px;
-}
-
-#timeline {
-    width: 3px;
-    height: 860px;
-    background-color: rgb(124, 124, 124);
-    margin-left: 20px;
-
-    #bubble-current {
-        margin-top: 0;
+@media only screen and (min-width: 1000px) {
+    #timeline-large {
+        width: 900px;
+        height: 884px;
+        margin-left: 40px;
+        clear: both;
+        line-height: 1.1;
     }
 
-    #bubble-2020 {
-        margin-top: 30px;
-    }
-
-    #bubble-2019 {
-        margin-top: 220px;
-    }
-
-    #bubble-2018 {
-        margin-top: 220px;
-    }
-
-    #bubble-2017 {
-        margin-top: 90px;
-    }
-
-    #bubble-2016 {
-        margin-top: 90px;
-    }
-
-    #bubble-2015 {
-        margin-top: 50px;
-    }
-
-    #bubble-2014 {
-        margin-top: 15px;
-    }
-
-    #bubble-2013 {
-        margin-top: 15px;
-    }
-
-    #bubble-2012 {
-        margin-top: 15px;
-    }
-}
-
-.bubble-container {
-    width: 60px;
-    float: left;
-    margin-left: -3px;
-    $bubble-size: 9px;
-
-    .bubble {
-        height: $bubble-size;
-        width: $bubble-size;
-        background-color: black;
-        border-radius: 50%;
+    #timeline-container {
+        width: 100px;
         float: left;
-    }
-
-    .year {
-        float: left;
-        margin-left: 5px;
-        margin-top: -3px;
-    }
-
-}
-
-.side-content {
-    float: left;
-    width: 400px;
-
-    h3 {
         margin-top: 20px;
-        margin-bottom: 10px;
+    }
+    
+    #timeline {
+        width: 3px;
+        height: 860px;
+        background-color: rgb(124, 124, 124);
+        margin-left: 20px;
+    
+        #bubble-current {
+            margin-top: 0;
+        }
+    
+        #bubble-2020 {
+            margin-top: 30px;
+        }
+    
+        #bubble-2019 {
+            margin-top: 220px;
+        }
+    
+        #bubble-2018 {
+            margin-top: 220px;
+        }
+    
+        #bubble-2017 {
+            margin-top: 90px;
+        }
+    
+        #bubble-2016 {
+            margin-top: 90px;
+        }
+    
+        #bubble-2015 {
+            margin-top: 50px;
+        }
+    
+        #bubble-2014 {
+            margin-top: 15px;
+        }
+    
+        #bubble-2013 {
+            margin-top: 15px;
+        }
+    
+        #bubble-2012 {
+            margin-top: 15px;
+        }
+    }
+    
+    .bubble-container {
+        width: 60px;
+        float: left;
+        margin-left: -3px;
+        $bubble-size: 9px;
+    
+        .bubble {
+            height: $bubble-size;
+            width: $bubble-size;
+            background-color: black;
+            border-radius: 50%;
+            float: left;
+        }
+    
+        .year {
+            float: left;
+            margin-left: 5px;
+            margin-top: -3px;
+        }
+    
     }
 }
+
+@media only screen and (max-width: 600px) {
+    #timeline-large {
+        margin: 40px;
+    }
+    #timeline-container {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .side-content {
+        float: left;
+        width: 400px;
+    
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
 
 #skills-header {
     margin-top: 0px;
 }
-
-.skill {
-    width: 400px;
-    height: 20px;
-    margin-top: 10px;
-
-    .skill-name {
-        width: 100px;
-        font-size: 16px;
-        float: left;
-        clear: both;
-    }
-
-    .skill-bar {
-        $skill-bar-width: 250px;
-        $skill-bar-height: 10px;
-        $skill-bar-border-radius: $skill-bar-height / 2;
-        $skill-bar-increment: 25px;
-        $skill-bar-bg-color: rgb(199, 199, 199);
-        $skill-bar-color: rgb(77, 126, 190);
-
-        float: left;
-        margin: 5px 25px;
-        width: $skill-bar-width;
-        height: $skill-bar-height;
-        background-color: $skill-bar-bg-color;
-        border-radius: $skill-bar-border-radius;
-
-        .lvl {
-            background-color: $skill-bar-color;
-            height: $skill-bar-height;
-            border-radius: $skill-bar-border-radius;
-            /* For text in bar, such as Advanced, proffiecient, basic */
-            // text-align: right;
-            // color: white;
+@media only screen and (min-width: 1000px) {
+    .skill {
+        width: 400px;
+        height: 20px;
+        margin-top: 10px;
+    
+        .skill-name {
+            width: 100px;
+            font-size: 16px;
+            float: left;
+            clear: both;
         }
+    
+        .skill-bar {
+            $skill-bar-width: 250px;
+            $skill-bar-height: 10px;
+            $skill-bar-border-radius: $skill-bar-height / 2;
+            $skill-bar-increment: 25px;
+            $skill-bar-bg-color: rgb(199, 199, 199);
+            $skill-bar-color: rgb(77, 126, 190);
+    
+            float: left;
+            margin: 5px 25px;
+            width: $skill-bar-width;
+            height: $skill-bar-height;
+            background-color: $skill-bar-bg-color;
+            border-radius: $skill-bar-border-radius;
+    
+            .lvl {
+                background-color: $skill-bar-color;
+                height: $skill-bar-height;
+                border-radius: $skill-bar-border-radius;
+                /* For text in bar, such as Advanced, proffiecient, basic */
+                // text-align: right;
+                // color: white;
+            }
+    
+            @for $i from 2 through 10 {
+                .lvl-#{$i} {
+                    width: $i * $skill-bar-increment;
+                }
+            }
+        }
+    }
+}
 
-        @for $i from 2 through 10 {
-            .lvl-#{$i} {
-                width: $i * $skill-bar-increment;
+@media only screen and (max-width: 600px) {
+    .skill {
+        // width: 300px;
+        height: 20px;
+        margin-top: 10px;
+    
+        .skill-name {
+            width: 100px;
+            font-size: 16px;
+            float: left;
+            clear: both;
+        }
+    
+        .skill-bar {
+            $skill-bar-width: 210px;
+            $skill-bar-height: 10px;
+            $skill-bar-border-radius: $skill-bar-height / 2;
+            $skill-bar-increment: 21px;
+            $skill-bar-bg-color: rgb(199, 199, 199);
+            $skill-bar-color: rgb(77, 126, 190);
+    
+            float: left;
+            margin: 2px 5px;
+            width: $skill-bar-width;
+            height: $skill-bar-height;
+            background-color: $skill-bar-bg-color;
+            border-radius: $skill-bar-border-radius;
+    
+            .lvl {
+                background-color: $skill-bar-color;
+                height: $skill-bar-height;
+                border-radius: $skill-bar-border-radius;
+                /* For text in bar, such as Advanced, proffiecient, basic */
+                // text-align: right;
+                // color: white;
+            }
+    
+            @for $i from 2 through 10 {
+                .lvl-#{$i} {
+                    width: $i * $skill-bar-increment;
+                }
             }
         }
     }
@@ -292,136 +424,280 @@ $dark-blue: rgb(48, 68, 107);
     }
 }
 
-.hobby {
-    width: 133.33px;
-    float: left;
-
-    .hobby-icon {
-        font-size: 36px;
-        margin-bottom: 5px;
-        text-align: center;
-    }
-
-    .hobby-text {
-        text-align: center;
-    }
-
-    #snowboarding-icon {
-        margin-left: 50px;
-    }
-    #gym-icon {
-        margin-left: 45px;
-    }
-    #reading-icon {
-        margin-left: 48px;
-    }
-    #gaming-icon{
-        margin-left: 44px;
-    }
-    #art-icon{
-        margin-left: 50px;
-    }
-    #puzzle-icon{
-        margin-left: 50px;
-    }
-    #coding-icon{
-        margin-left: 45px;
-    }
-}
-
-#education-container {
-    float: left;
-    margin-top: 20px;
-    clear: both;
-}
-
-#experience-container {
-    float: right;
-}
-
-.eduexp-container {
-    width: 400px;
-    overflow: auto;
-
-    /* Collapsing Margins */
-    p {
-        width: 400px;
-    }
-
-    .title {
-        font-weight: bold;
-        width: 240px;
+@media only screen and (min-width: 1000px) {
+    .hobby {
+        width: 133.33px;
         float: left;
-        font-size: 16px;
+    
+        .hobby-icon {
+            font-size: 36px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+    
+        .hobby-text {
+            text-align: center;
+        }
+    
+        #snowboarding-icon {
+            margin-left: 50px;
+        }
+        #gym-icon {
+            margin-left: 45px;
+        }
+        #reading-icon {
+            margin-left: 48px;
+        }
+        #gaming-icon{
+            margin-left: 44px;
+        }
+        #art-icon{
+            margin-left: 50px;
+        }
+        #puzzle-icon{
+            margin-left: 50px;
+        }
+        #coding-icon{
+            margin-left: 45px;
+        }
     }
+}
 
-    .time-period {
-        width: 160px;
-        float: right;
-        color: grey;
-        text-align: right;
+@media only screen and (max-width: 600px) {
+    .hobbies{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    .hobby {
+        width: 133.33px;
+        margin: 10px;
+    
+        .hobby-icon {
+            font-size: 36px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+    
+        .hobby-text {
+            text-align: center;
+        }
+    
+        #snowboarding-icon {
+            margin-left: 50px;
+        }
+        #gym-icon {
+            margin-left: 45px;
+        }
+        #reading-icon {
+            margin-left: 48px;
+        }
+        #gaming-icon{
+            margin-left: 44px;
+        }
+        #art-icon{
+            margin-left: 50px;
+        }
+        #puzzle-icon{
+            margin-left: 50px;
+        }
+        #coding-icon{
+            margin-left: 45px;
+        }
+    }
+}
 
-    .company {
+@media only screen and (min-width: 1000px) {
+    #education-container {
         float: left;
-        margin-top: 5px;
+        margin-top: 20px;
         clear: both;
     }
-
-    // .school-icon {
-    //     margin-top: 5px;
-    //     margin-right: 5px;
-    //     float: left;
-    //     clear: both;
-    // }
-
-    .school {
-        float: left;
-        margin-top: 5px;
+    
+    #experience-container {
+        float: right;
     }
 
-    // .marker-icon {
-    //     margin-top: 5px;
-    //     margin-right: 5px;
-    //     float: left;
-    //     clear: both;
-    // }
-
-    .location {
-        float: left;
-        color: grey;
-        margin-top: 5px;
+    .category {
+        margin-bottom: 10px;
+        clear: both;
     }
-
-    .details {
-        float: left;
-        margin-top: 5px;
-        margin-bottom: 20px;
-    }
-
-    .thesis-title {
-        float: left;
-        text-align: center;
-        font-size: 15px;
-        font-weight: 800;
-    }
-
-    .thesis-details {
-        float: left;
-        margin-top: 5px;
-        margin-bottom: 20px;
+    
+    .eduexp-container {
+        width: 400px;
+        overflow: auto;
+    
+        /* Collapsing Margins */
+        p {
+            width: 400px;
+        }
+    
+        .title {
+            font-weight: bold;
+            width: 240px;
+            float: left;
+            font-size: 16px;
+        }
+    
+        .time-period {
+            width: 160px;
+            float: right;
+            color: grey;
+            text-align: right;
+        }
+    
+        .company {
+            float: left;
+            margin-top: 5px;
+            clear: both;
+        }
+    
+        // .school-icon {
+        //     margin-top: 5px;
+        //     margin-right: 5px;
+        //     float: left;
+        //     clear: both;
+        // }
+    
+        .school {
+            float: left;
+            margin-top: 5px;
+        }
+    
+        // .marker-icon {
+        //     margin-top: 5px;
+        //     margin-right: 5px;
+        //     float: left;
+        //     clear: both;
+        // }
+    
+        .location {
+            float: left;
+            color: grey;
+            margin-top: 5px;
+        }
+    
+        .details {
+            float: left;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+    
+        .thesis-title {
+            float: left;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 800;
+        }
+    
+        .thesis-details {
+            float: left;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
     }
 }
 
-.category {
-    margin-bottom: 10px;
-    clear: both;
+@media only screen and (max-width: 600px) {
+    #education-container {
+        // float: left;
+        margin-top: 20px;
+        // clear: both;
+    }
+    
+    #experience-container {
+        // float: right;
+    }
+
+    .category {
+        margin-bottom: 10px;
+        // clear: both;
+    }
+    
+    .eduexp-container {
+        // width: 400px;
+        // overflow: auto;
+    
+        /* Collapsing Margins */
+        p {
+            // width: 400px;
+        }
+    
+        .title {
+            font-weight: bold;
+            width: 240px;
+            // float: left;
+            font-size: 16px;
+        }
+    
+        .time-period {
+            width: 160px;
+            // float: right;
+            color: grey;
+            // text-align: right;
+        }
+    
+        .company {
+            // float: left;
+            margin-top: 5px;
+            // clear: both;
+        }
+    
+        // .school-icon {
+        //     margin-top: 5px;
+        //     margin-right: 5px;
+        //     float: left;
+        //     clear: both;
+        // }
+    
+        .school {
+            float: left;
+            margin-top: 5px;
+        }
+    
+        // .marker-icon {
+        //     margin-top: 5px;
+        //     margin-right: 5px;
+        //     float: left;
+        //     clear: both;
+        // }
+    
+        .location {
+            // float: left;
+            color: grey;
+            margin-top: 5px;
+        }
+    
+        .details {
+            // float: left;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+    
+        .thesis-title {
+            // float: left;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 800;
+        }
+    
+        .thesis-details {
+            // float: left;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footnote{
+        display: none;
+    }
 }
 
 .footnote {
     margin-top: 20px;
     text-align: center;
-
 
     #pug {
         // color: #A86454;
