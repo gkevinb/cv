@@ -108,9 +108,7 @@
                     each edu in education
                         p(class="title")=edu.degree
                         p(class="time-period")=edu.timePeriod
-                        //- i(class="school-icon fas fa-graduation-cap")
                         a(class="school" href=edu.school.link)=edu.school.name
-                        //- i(class="marker-icon fas fa-map-marker-alt")
                         p(class="location") #{edu.city}, #{edu.country}
                         p(class="details")=edu.details
                         p(class="thesis-title")=edu.thesis.title
