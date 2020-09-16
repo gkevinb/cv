@@ -1,15 +1,19 @@
 $dark-blue: rgb(48, 68, 107);
 
 #first-page{
-    // @include pdf-page();
     background-color: white;
-    width: 400px;
-    // height: 1400px;
     overflow: auto; // Collapsing margins
     font-family: 'Montserrat', sans-serif;
     font-size: 14px; /* Renders similarly on PDF */
 }
-
+@media only screen and (max-width: 1000px) {
+    #first-page{
+        width: 100%;
+    }
+    .cv{
+        width: 100%;
+    }
+}
 @media only screen and (min-width: 1000px) {
     #first-page{
         @include pdf-page();
@@ -23,9 +27,10 @@ $dark-blue: rgb(48, 68, 107);
 }
 @media only screen and (max-width: 1000px) {
     .photo {
+        margin-top: 10px;
         #profile-image {
             margin: 20px;
-            width: 280px;
+            width: 240px;
         }
     }
 }
@@ -41,6 +46,7 @@ $dark-blue: rgb(48, 68, 107);
 .headline {
     color: $dark-blue;
     border-bottom: 3px solid $dark-blue;
+    width: 80%;
     h1 {
         font-size: 24px;
         margin-bottom: 10px;
@@ -326,6 +332,17 @@ $dark-blue: rgb(48, 68, 107);
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
 .skill-name {
     width: 100px;
     font-size: 16px;
@@ -341,7 +358,6 @@ $dark-blue: rgb(48, 68, 107);
         width: 400px;
     }
 }
-
 @media only screen and (min-width: 1000px) {
     .skill-bar {
         @include skill-bar-component(250px);
@@ -355,23 +371,43 @@ $dark-blue: rgb(48, 68, 107);
     }
 }
 
-.grouping-languages {
-    margin-bottom: 10px;
-    height: 20px;
-
-    h4 {
-        font-size: 16px;
-        width: 100px;
-        float: left;
-        clear: both;
+@media only screen and (min-width: 1000px) {
+    .grouping-languages {
+        margin-bottom: 10px;
+        height: 20px;
+    
+        h4 {
+            font-size: 16px;
+            width: 100px;
+            float: left;
+            clear: both;
+        }
+    
+        .language-list {
+            width: 200px;
+            text-align: center;
+            float: left;
+            vertical-align: baseline;
+            margin-top: 2px;
+        }
     }
-
-    .language-list {
-        width: 200px;
-        text-align: center;
-        float: left;
-        vertical-align: baseline;
-        margin-top: 1px;
+}
+@media only screen and (max-width: 1000px) {
+    .grouping-languages {
+        margin-bottom: 10px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+    
+        h4 {
+            font-size: 16px;
+            clear: both;
+        }
+    
+        .language-list {
+            text-align: center;
+            margin-top: 1px;
+        }
     }
 }
 
@@ -426,7 +462,8 @@ $dark-blue: rgb(48, 68, 107);
 @media only screen and (max-width: 1000px) {
     .hobbies{
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
     }
     .hobby {
@@ -529,13 +566,13 @@ $dark-blue: rgb(48, 68, 107);
     
         .title {
             font-weight: bold;
-            width: 240px;
             font-size: 16px;
         }
     
         .time-period {
             width: 160px;
             color: grey;
+            margin-bottom: 5px;
         }
     
         .company {
@@ -543,7 +580,6 @@ $dark-blue: rgb(48, 68, 107);
         }
     
         .school {
-            float: left;
             margin-top: 5px;
         }
     
@@ -570,12 +606,6 @@ $dark-blue: rgb(48, 68, 107);
     }
 }
 
-@media only screen and (max-width: 1000px) {
-    .footnote{
-        display: none;
-    }
-}
-
 .footnote {
     margin-top: 20px;
     text-align: center;
@@ -592,5 +622,10 @@ $dark-blue: rgb(48, 68, 107);
         color: rgb(175, 175, 175);
         font-weight: bold;
         text-decoration: none;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .footnote{
+        display: none;
     }
 }

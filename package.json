@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/gkevinb/cv#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "node-sass": "^4.14.1",
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
@@ -31,14 +31,14 @@
     "reset-css": "^5.0.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-data": "^1.3.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "yargs": "^15.3.1"
+    "gulp-sass": "^4.1.0",
+    "yargs": "^15.4.1"
   }
 }
