@@ -1,0 +1,7 @@
+@import '../../../node_modules/reset-css/sass/reset';
+@import './standard';
+
+@import './pdf'; /* Needed for pdf generation because without media queries */
+// @import './timeline';
+
+@import './pages'; /* for brown background */

@@ -1,6 +1,8 @@
 
 $dark-blue: rgb(48, 68, 107);
 
+/* Needed for pdf generation */
+
 #first-page{
     @include pdf-page();
     background-color: white;
@@ -87,6 +89,10 @@ $dark-blue: rgb(48, 68, 107);
     #skype-icon {
         margin-left: 1px;
         margin-right: 2px;
+    }
+
+    #instagram-icon {
+        margin-left: 2px;
     }
 
     #home-icon {
@@ -289,7 +295,7 @@ $dark-blue: rgb(48, 68, 107);
         text-align: center;
         float: left;
         vertical-align: baseline;
-        margin-top: 1px;
+        margin-top: 2px;
     }
 }
 
@@ -425,14 +431,12 @@ $dark-blue: rgb(48, 68, 107);
 
 
     #pug {
-        // color: #A86454;
         color: rgb(175, 175, 175);
         font-weight: bold;
         text-decoration: none;
     }
 
     #sass {
-        // color: #254DE4;
         color: rgb(175, 175, 175);
         font-weight: bold;
         text-decoration: none;

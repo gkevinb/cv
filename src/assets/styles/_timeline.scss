@@ -1,5 +1,8 @@
 $dark-blue: rgb(48, 68, 107);
 
+/* Mobile friendly version */
+
+
 #first-page{
     background-color: white;
     overflow: auto; // Collapsing margins
@@ -140,6 +143,10 @@ $dark-blue: rgb(48, 68, 107);
     #skype-icon {
         margin-left: 1px;
         margin-right: 2px;
+    }
+
+    #instagram-icon {
+        margin-left: 2px;
     }
 
     #home-icon {
@@ -611,14 +618,12 @@ $dark-blue: rgb(48, 68, 107);
     text-align: center;
 
     #pug {
-        // color: #A86454;
         color: rgb(175, 175, 175);
         font-weight: bold;
         text-decoration: none;
     }
 
     #sass {
-        // color: #254DE4;
         color: rgb(175, 175, 175);
         font-weight: bold;
         text-decoration: none;

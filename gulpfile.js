@@ -21,11 +21,13 @@ const paths = {
         all: 'src/**/*.pug'
     },
     scss: {
-        main: 'src/assets/styles/main.scss',
+        pages: 'src/assets/styles/main-pages.scss',
+        pdf: 'src/assets/styles/main-pdf.scss',
         all: 'src/assets/styles/*.scss'
     },
     data: 'src/assets/data/data.json',
-    img: 'src/assets/img/*'
+    img: 'src/assets/img/*',
+    export: 'export/GaborKevinBartaCV.pdf'
 }
 
 const pugPrettyOptions = {
@@ -67,7 +69,7 @@ gulp.task('pug', function () {
 });
 
 gulp.task('sass', function () {
-    return gulp.src(paths.scss.main)
+    return gulp.src(paths.scss[pugSource])
         .pipe(sass())
         .pipe(gulp.dest(paths.dist.all))
         .pipe(browserSync.stream());
@@ -86,8 +88,13 @@ gulp.task('image-min-build', () =>
         .pipe(gulp.dest(paths.docs))
 );
 
+gulp.task('move-export-pdf', () =>
+    gulp.src(paths.export)
+        .pipe(gulp.dest(paths.docs))
+);
+
 gulp.task('sass-build', function () {
-    return gulp.src(paths.scss.main)
+    return gulp.src(paths.scss.pages)
         .pipe(sass())
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 99 versions'],
@@ -105,7 +112,7 @@ gulp.task('browser-sync', function () {
     gulp.watch(paths.dist.html).on('change', browserSync.reload);
 });
 
-gulp.task('build', gulp.series('pages-build', 'sass-build', 'image-min-build'));
+gulp.task('build', gulp.series('pages-build', 'sass-build', 'image-min-build', 'move-export-pdf'));
 gulp.task('serve', gulp.series('pug', 'sass', 'image-min', 'browser-sync'));
 
 gulp.task('pdf-puppeteer', async function(){
@@ -116,7 +123,7 @@ gulp.task('pdf-puppeteer', async function(){
         await page.goto('http://localhost:3000', { waitUntil: 'networkidle2'})
         await page.pdf(
             {
-                path: 'export/using_puppeteer.pdf',
+                path: 'export/GaborKevinBartaCV.pdf',
                 format: 'A4'
             }
         )

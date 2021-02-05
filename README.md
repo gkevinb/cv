@@ -25,20 +25,21 @@ Build presentable version for Github Pages
 ```
 npm run build
 ```
-Export pdf (without margins)
+Export pdf
 ```
-npm run pdf
+npm run pdf-puppeteer
 ```
-Export pdf (with margins, not used)
-```
-npm run pdf-margin
-```
+
 
 ## Instructions
 
 Run `npm run serve-pdf` command to start up localhost, then run `npm run pdf` to take snapshot of the localhost and convert it into a pdf file. The pdf file is called `example.pdf` and exported to the `export` directory.
 
-## Converting to PDF
+## Converting to PDF 
+
+Use puppeteer command
+
+## Converting to PDF (Old way)
 
 Exporting my CV to a PDF using the following `wkhtmltopdf` command.
 https://wkhtmltopdf.org/
@@ -52,6 +53,14 @@ wkhtmltopdf https://gaborkevinbarta.com/blog gabor.pdf
 Note command can only be used on sites that are fully static, created using a static site generator. If there is anything dynaminc like `Vue.js` then the site won't be exported correctly.
 
 https://wkhtmltopdf.org/usage/wkhtmltopdf.txt
+
+### Old commands
+
+```
+    "pdf-margin": "wkhtmltopdf http://localhost:3000/ export/margin.pdf",
+    "pdf": "wkhtmltopdf -T 0 -B 0 -L 0 -R 0 --javascript-delay 1000 http://localhost:3000/ export/example.pdf && open export/example.pdf",
+    "pdf-gabor": "wkhtmltopdf -T 0 -B 0 -L 0 -R 0 --javascript-delay 1000 http://localhost:3000/ export/GaborKevinBartaCV.pdf && open export/GaborKevinBartaCV.pdf",
+```
 
 ## Pug
 

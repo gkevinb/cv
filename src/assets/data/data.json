@@ -3,6 +3,7 @@
     "title": "Software Developer",
     "email": "gkevinba@gmail.com",
     "skype": "gkbarta",
+    "instagram": "kev.in.tech",
     "phone": "+36 20 437 3094",
     "birthday": "22 February 1994",
     "city": "Budapest",
@@ -20,7 +21,8 @@
         "title": "in/gabor-kevin-barta",
         "link": "https://www.linkedin.com/in/gabor-kevin-barta/"
     },
-    "intro": "I am a hard-working and dedicated software engineer eager to put my knowledge and skills to use at a company which challenges me and gives me an opportunity to grow even further. I am ambitious, and I stay focused on the task at hand. I am passionate about fullstack development. I am most proficient in back-end development and I also have knowledge of front-end languages. I am looking for a workplace where I can thrive on challenges and deepen my knowledge of software engineering.",
+    "employeeIntro": "I am a dedicated software engineer eager to put my knowledge and skills to use with a company which challenges me and gives me an opportunity to grow even further. I am ambitious, and I stay focused on the task at hand. I am passionate about fullstack development. I am looking to work with others where I can thrive on challenges and deepen my knowledge of software engineering.",
+    "intro": "I am a dedicated software engineer eager to work together with clients and put my knowledge and skills to use and give value to my clients. I am ambitious, and I stay focused on the task at hand. I am passionate about fullstack development. I am looking to work with others where I can thrive on challenges, deepen my knowledge of software engineering, and create successful business relationships.",
     "education": [{
             "degree": "MSc in Software Engineering",
             "level": "Master",
