@@ -21,7 +21,7 @@
   "homepage": "https://github.com/gkevinb/cv#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
     "puppeteer": "^2.1.1",
